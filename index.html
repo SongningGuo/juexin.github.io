@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title style="text-align: center">焦虑自测</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
+    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
+    <link rel="stylesheet" href="list.css">
+    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+
+<body>
+    <div ng-app="myApp" ng-controller="myCtrl">
+
+        <h1 class="s_title">{{carname}}</h1>
+        <h3 class="s_title">{{texttitle}}</h3>
+
+        <table class="list_que" ng-repeat="value in vm.values">
+            <td>
+                <input type="radio" name="myTestRadio" ng-model="vm.selection" ng-value="value"
+                       ng-checked="vm.selection.code == value.code"/>&nbsp;&nbsp;{{value.title}}
+            </td>
+        </table>
+
+        <div>
+            <div ng-class="{box:hide}"></div>
+            <button class="btn_per" ng-show="type" ng-click="pre()">上一题</button>
+            <button class="btn_next" ng-show="type" ng-click="next()">下一题</button>
+            <button class="btn_commit" ng-show="flag" ng-click="commit()">提交</button>
+            <h3 class="s_title" ng-show="show_result">您的测评分数为{{scroe}}，{{result}}</h3>
+            <h4 ng-show="show_desc">推荐您必要时去医院心理科确诊。日常生活中坚持规律运动，并保持
+                高质量的人际关系。同时推荐您参加觉心公社举办的“正念疗愈焦虑训练营”，针对焦虑症症状、思维模式、心理创伤进行系统康复训练。</h4>
+            <a ng-show="show_desc" href="https://wxa30fac288f95de11.wx.wakkaa.com/appMjAxNDkw?t=1#/minipage/102473">点击前往体验“正念疗愈焦虑训练营”</a>
+            <h4 class="s_title" ng-show="show_desc">在“康复者说”版块可以找到已康复朋友的经验介绍<br>祝您早日康复。</h4>
+            <button ng-show="show_result" ng-click="again()">再测一次</button>
+            <button ng-show="show_result" ng-click="begain_sas()">进行SAS测试</button>
+            <h5 class="s_title" ng-show="show_result">*测评结果仅供个人参考，具体病情以专科医院诊断结果为准*</h5>
+        </div>
+    </div>
+    <script src="list.js"></script>
+</body>
+</html>
+
