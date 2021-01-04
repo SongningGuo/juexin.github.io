@@ -77,16 +77,17 @@ app.controller('myCtrl', function($scope) {
                $scope.show_desc = true;
             }
         }else if(scroes.length == 19){
-            $scope.scroe = parseInt(totlescroe*1.25);
-            if (0<=totlescroe && totlescroe<50){
+            var sas_scroe = parseInt(totlescroe*1.25);
+            $scope.scroe = sas_scroe;
+            if (0<=sas_scroe && sas_scroe<50){
                 $scope.result = "您的测评结果为：正常";
-            }else if(50<=totlescroe && totlescroe<60){
+            }else if(50<=sas_scroe && sas_scroe<60){
                $scope.show_desc = true;
                 $scope.result = "您可能是轻度焦虑症";
-            }else if(60<=totlescroe && totlescroe<70){
+            }else if(60<=sas_scroe && sas_scroe<70){
                 $scope.result = "您可能是中度焦虑症";
                $scope.show_desc = true;
-            }else if(70<=totlescroe){
+            }else if(70<=sas_scroe){
                 $scope.result = "您可能是重度焦虑症";
                $scope.show_desc = true;
             }
