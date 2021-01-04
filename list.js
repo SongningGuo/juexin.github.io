@@ -107,7 +107,7 @@ app.controller('myCtrl', function($scope) {
         $scope.show_result = false;
         $scope.show_desc = false;
 
-        $scope.carname = "焦虑自评量表SAS";
+        $scope.carname = "焦虑自评量表（SAS）";
         $scope.texttitle = "1、我觉得比平常容易紧张和着急(焦虑)。";
         vm = $scope.vm = {};
         texttitles = $scope.texttitles = [
