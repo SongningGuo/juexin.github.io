@@ -1,15 +1,24 @@
+.wrapper{
+	display: table;
+	text-align: center;
+	float: right;
+	width: 100%;
+	height: 100%
+}
 
-.btn_gad{
-	position: absolute;
-    margin-top: 60px;
-    width: 200px;
-    height: 80px;
-        text-decoration:none;
+
+.btn_sel{
+	display: table-cell;
+	vertical-align: middle;
+	margin-top: 25%;
+	width: 65%;
+	height: 120px;
+
+    text-decoration:none;
 	background:#239F60;
-	color:#f2f2f2;
-	
+	color:#f2f2f2;	
 	padding: 10px 30px 10px 30px;
-	font-size:16px;
+	font-size:45px;
 	font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
 	font-weight:bold;
 	border-radius:3px;
@@ -20,17 +29,26 @@
 
 }
 
-.btn_sas{
-	position: absolute;
-    margin-top: 170px;
-    width: 200px;
-    height: 80px;
-    text-decoration:none;
+.base_div{
+	padding-top: 30px;
+	padding-left: 30px;
+	padding-right: 30px;
+}
+
+.que{
+	display: table;
+	margin-top: 30px;
+	width: 100%;
+}
+
+.btn_per{
+	display: table-cell;
+
+	text-decoration:none;
 	background:#239F60;
 	color:#f2f2f2;
-	
 	padding: 10px 30px 10px 30px;
-	font-size:16px;
+	font-size:18px;
 	font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
 	font-weight:bold;
 	border-radius:3px;
@@ -41,17 +59,16 @@
 
 }
 
-.btn_phq{
-	position: absolute;
-    margin-top: 280px;
-    width: 200px;
-    height: 80px;
-    text-decoration:none;
+.btn_next{
+	display: table-cell;
+	margin-left: 100px;
+
+	text-decoration:none;
 	background:#239F60;
 	color:#f2f2f2;
-	
+
 	padding: 10px 30px 10px 30px;
-	font-size:16px;
+	font-size:18px;
 	font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
 	font-weight:bold;
 	border-radius:3px;
@@ -63,9 +80,41 @@
 }
 
 .btn_commit{
-    margin-top: 30px;
+	display: table-cell;
+	margin-left: 100px;
+	text-decoration:none;
+	background:#239F60;
+	color:#f2f2f2;
+
+    padding: 10px 30px 10px 30px;
+	font-size:18px;
+	font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
+	font-weight:bold;
+	border-radius:3px;
+	
+	-webkit-transition:all linear 0.30s;
+	-moz-transition:all linear 0.30s;
+	transition:all linear 0.30s;
+
 }
 
 .show_result{
-    margin-top: 50px;
+	margin-left: 100px;
+    margin-top: 30px;
+
+    text-decoration:none;
+	background:#239F60;
+	color:#f2f2f2;
+
+    padding: 10px 30px 10px 30px;
+	font-size:18px;
+	font-family: 微软雅黑,宋体,Arial,Helvetica,Verdana,sans-serif;
+	font-weight:bold;
+	border-radius:3px;
+	
+	-webkit-transition:all linear 0.30s;
+	-moz-transition:all linear 0.30s;
+	transition:all linear 0.30s;
+
 }
+

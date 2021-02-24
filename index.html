@@ -5,21 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title style="text-align: center">觉心公社-自测量表</title>
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
-    <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/main.css">
     <link rel="stylesheet" href="list.css">
-    <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.6/angular.min.js"></script>
 </head>
 
 <body>
-    <div ng-app="myApp" ng-controller="myCtrl" align="center">
-            <button class="btn_gad" ng-show="type" ng-click="gad()">广泛性焦虑测试</button>
-            <button class="btn_sas" ng-show="type" ng-click="sas()">焦虑测试</button>
-            <button class="btn_phq" ng-show="type" ng-click="phq()">抑郁测试</button>    
+    <div class="wrapper" align="center">
+            <button class="btn_sel" onclick="gad()">广泛性焦虑测试</button>
     </div>
-    <script src="list.js"></script>
+        <div class="wrapper" align="center">
+            <button class="btn_sel" onclick="sas()">焦虑测试</button>
+    </div>
+
+    <div class="wrapper" align="center">
+            <button class="btn_sel" onclick="phq()">抑郁测试</button>    
+    </div>
+
+
+    <script>
+        function gad(){
+        window.location.href="gad7.html";
+    };
+
+        function sas() {
+        window.location.href="sas.html";
+    };
+        function phq() {
+        window.location.href="phq.html";
+    };
+
+    </script>
 </body>
 </html>
 

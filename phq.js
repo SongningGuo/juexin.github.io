@@ -10,7 +10,7 @@ app.controller('myCtrl', function($scope) {
         $scope.show_desc = false;
         $scope.show_q_desc = false;
 
-        $scope.carname = "焦虑自评量表（SAS）";
+        $scope.carname = "抑郁量表（PHQ-9）";
         $scope.texttitle = "1、做事时提不起劲或没有兴趣";
         var vm = $scope.vm = {};
         var texttitles = $scope.texttitles = [
