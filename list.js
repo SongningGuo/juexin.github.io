@@ -7,6 +7,7 @@ app.controller('myCtrl', function($scope) {
     $scope.flag = false;
     $scope.show_result = false;
     $scope.show_desc = false;
+    $scope.show_q_desc = false;
 
     $scope.carname = "广泛性焦虑自评量表（GAD-7）";
     $scope.texttitle = "1、感觉紧张、焦虑或急切";
@@ -29,6 +30,16 @@ app.controller('myCtrl', function($scope) {
         {title:  '几乎每天' , scroe: 3,code:3}
     ];
     vm.selection = vm.values[0];    //默认显示第二个
+    $scope.gad = function() {
+        window.location.href="gad7.html";
+    };
+
+    $scope.sas = function() {
+        window.location.href="sas.html";
+    };
+    $scope.phq = function() {
+        window.location.href="phq.html";
+    };
 
     $scope.pre = function() {
         if (page==0){
@@ -68,7 +79,7 @@ app.controller('myCtrl', function($scope) {
                 $scope.result = "您的测评结果为：正常";
             }else if(5<=totlescroe && totlescroe<10){
                 $scope.result = "您可能是轻度焦虑症";
-               $scope.show_desc = true;
+               $scope.show_q_desc = true;
             }else if(10<=totlescroe && totlescroe<15){
                 $scope.result = "您可能是中度焦虑症";
                $scope.show_desc = true;
@@ -82,8 +93,8 @@ app.controller('myCtrl', function($scope) {
             if (0<=sas_scroe && sas_scroe<50){
                 $scope.result = "您的测评结果为：正常";
             }else if(50<=sas_scroe && sas_scroe<60){
-               $scope.show_desc = true;
-                $scope.result = "您可能是轻度焦虑症";
+               $scope.show_q_desc = true;
+                $scope.show_q_desc = "您可能是轻度焦虑症";
             }else if(60<=sas_scroe && sas_scroe<70){
                 $scope.result = "您可能是中度焦虑症";
                $scope.show_desc = true;
@@ -106,6 +117,7 @@ app.controller('myCtrl', function($scope) {
         $scope.flag = false;
         $scope.show_result = false;
         $scope.show_desc = false;
+        $scope.show_q_desc = false;
 
         $scope.carname = "焦虑自评量表（SAS）";
         $scope.texttitle = "1、我觉得比平常容易紧张和着急(焦虑)。";
