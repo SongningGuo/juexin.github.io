@@ -68,25 +68,22 @@ app.controller('myCtrl', function($scope) {
         angular.forEach(scroes, function (v, k) {
             totlescroe = totlescroe+v;
         });
-        if(scroes.length == 8){
-            $scope.scroe = totlescroe;
-            if (totlescroe<5){
-                $scope.result = "您的测评结果为：正常";
-            }else if(5<=totlescroe && totlescroe<10){
-                $scope.result = "您可能是轻度抑郁";
-               $scope.show_q_desc = true;
-            }else if(10<=totlescroe && totlescroe<15){
-                $scope.result = "您可能是中度抑郁";
-               $scope.show_desc = true;
-            }else if(15<=totlescroe && totlescroe<20){
-                $scope.result = "您可能是中重度抑郁";
-               $scope.show_desc = true;
-            }else if(20<=totlescroe){
-                $scope.result = "您可能是重度抑郁";
-               $scope.show_desc = true;
-            }
+        $scope.scroe = totlescroe;
+        if (totlescroe<5){
+            $scope.result = "您的测评结果为：正常";
+        }else if(5<=totlescroe && totlescroe<10){
+            $scope.result = "您可能是轻度抑郁";
+           $scope.show_desc = true;
+        }else if(10<=totlescroe && totlescroe<15){
+            $scope.result = "您可能是中度抑郁";
+           $scope.show_desc = true;
+        }else if(15<=totlescroe && totlescroe<20){
+            $scope.result = "您可能是中重度抑郁";
+           $scope.show_desc = true;
+        }else if(20<=totlescroe){
+            $scope.result = "您可能是重度抑郁";
+           $scope.show_desc = true;
         }
-
     };
 
     $scope.again = function() {
